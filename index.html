@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Darrell Parkhouse | Full-Stack Developer (Node.js, TypeScript, React, PostgreSQL)</title>
-  <meta name="description" content="Darrell Parkhouse is a full-stack developer writing software since 1981: C++ veteran, now building with Node.js, TypeScript, Python, React and PostgreSQL. Open to remote roles and contract work.">
+  <title>Darrell Parkhouse | Full-Stack Developer since 1981</title>
+  <meta name="description" content="Darrell Parkhouse: full-stack developer writing software since 1981. 20+ years of professional C++, now building with Node.js, TypeScript, Python, React and PostgreSQL. Open to remote roles and contract work.">
   <link rel="canonical" href="https://elite-coder-2026.github.io/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Darrell Parkhouse | Full-Stack Developer">
-  <meta property="og:description" content="Full-stack developer since 1981. Node.js, TypeScript, Python, React and PostgreSQL. Open to remote roles and contract work.">
+  <meta property="og:title" content="Darrell Parkhouse | Full-Stack Developer since 1981">
+  <meta property="og:description" content="20+ years of C++, now full-stack with Node.js, TypeScript, Python, React and PostgreSQL. Open to remote roles and contract work.">
   <meta property="og:url" content="https://elite-coder-2026.github.io/">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
@@ -17,56 +17,401 @@
     "@type": "Person",
     "name": "Darrell Parkhouse",
     "url": "https://elite-coder-2026.github.io/",
-    "sameAs": [
-      "https://github.com/elite-coder-2026"
-    ],
+    "email": "mailto:darrellparkhouse82@gmail.com",
+    "sameAs": ["https://github.com/elite-coder-2026"],
     "jobTitle": "Full-Stack Developer",
-    "knowsAbout": ["Software Architecture", "Node.js", "TypeScript", "React", "PostgreSQL", "Python", "C++", "Express", "SQL"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Manito",
-      "addressRegion": "IL",
-      "addressCountry": "US"
-    }
+    "knowsAbout": ["Software Architecture", "C++", "Node.js", "TypeScript", "React", "PostgreSQL", "Python", "SQL", "Express"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Manito", "addressRegion": "IL", "addressCountry": "US" }
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
-    :root { --text: #111827; --muted: #4b5563; --bg: #f9fafb; --card: #ffffff; --border: #e5e7eb; --accent: #6d28d9; }
-    @media (prefers-color-scheme: dark) { :root { --text: #f3f4f6; --muted: #9ca3af; --bg: #111214; --card: #1a1b1f; --border: #2e3036; --accent: #c4b5fd; } }
+    :root {
+      --bg: #0b0d12;
+      --bg-raised: #12151c;
+      --card: #151922;
+      --border: #232836;
+      --text: #f3f4f6;
+      --muted: #9aa3b2;
+      --accent: #8b5cf6;
+      --accent-2: #22d3ee;
+      --accent-soft: rgba(139, 92, 246, 0.14);
+      --radius: 14px;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-    main { max-width: 760px; margin: 0 auto; padding: 56px 16px; }
-    h1 { margin: 0; font-size: 34px; letter-spacing: -0.02em; }
-    .role { margin: 4px 0 20px; color: var(--muted); font-size: 18px; }
-    h2 { margin: 40px 0 12px; font-size: 20px; }
-    a { color: var(--accent); }
-    ul.projects { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    ul.projects li { padding: 14px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
-    ul.projects strong a { text-decoration: none; }
-    .muted { color: var(--muted); }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11, 13, 18, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: var(--mono); font-weight: 500; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    nav ul { display: flex; gap: 24px; margin: 0; padding: 0; list-style: none; }
+    nav ul a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+    nav ul a:hover { color: var(--text); }
+    @media (max-width: 600px) { nav ul { gap: 16px; } nav ul li:nth-child(n+3) { display: none; } }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 110px 0 90px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: -40% -10% auto auto;
+      width: 640px; height: 640px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.28), transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; left: -200px; bottom: -260px;
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.14), transparent 65%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg-raised);
+      color: var(--muted);
+      font-size: 13px; font-weight: 500;
+    }
+    .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18); }
+    h1 {
+      position: relative;
+      margin: 22px 0 18px;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+    }
+    h1 .gradient {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .lead { position: relative; max-width: 640px; margin: 0 0 32px; color: var(--muted); font-size: clamp(17px, 2.2vw, 20px); }
+    .actions { position: relative; display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600; font-size: 15px;
+      text-decoration: none;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #7c3aed; }
+    .btn-ghost { border: 1px solid var(--border); background: var(--bg-raised); }
+    .btn-ghost:hover { border-color: var(--accent); }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* Stats */
+    .stats {
+      position: relative;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      margin-top: 64px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-raised);
+      overflow: hidden;
+    }
+    .stat { padding: 22px 24px; }
+    .stat + .stat { border-left: 1px solid var(--border); }
+    .stat strong { display: block; font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+    .stat span { color: var(--muted); font-size: 14px; }
+    @media (max-width: 760px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(3) { border-left: none; }
+      .stat:nth-child(n+3) { border-top: 1px solid var(--border); }
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-head { margin-bottom: 36px; }
+    .kicker { font-family: var(--mono); color: var(--accent-2); font-size: 13px; }
+    h2 { margin: 6px 0 0; font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.025em; }
+    .section-head p { max-width: 620px; margin: 10px 0 0; color: var(--muted); }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    @media (max-width: 760px) { .projects { grid-template-columns: 1fr; } }
+    .project {
+      display: flex; flex-direction: column;
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color .2s ease, transform .2s ease;
+    }
+    .project:hover { border-color: rgba(139, 92, 246, 0.6); transform: translateY(-2px); }
+    .project.featured { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), var(--card) 55%); }
+    .project-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .project h3 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+    .badge { padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: #c4b5fd; font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .project p { margin: 0 0 18px; color: var(--muted); }
+    .project ul.highlights { margin: -6px 0 18px; padding-left: 18px; color: var(--muted); }
+    .project ul.highlights li { margin: 2px 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; margin-bottom: 18px; }
+    .tags span { padding: 3px 9px; border: 1px solid var(--border); border-radius: 6px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .shots { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(3, 1fr); gap: 10px; margin: 0 0 20px; }
+    .shots .main { grid-row: 1 / 4; }
+    @media (max-width: 760px) { .shots { grid-template-columns: 1fr; grid-template-rows: none; } .shots .main { grid-row: auto; } }
+    .shot { display: block; margin: 0 0 18px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+    .shots .shot { margin: 0; }
+    .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform .3s ease; }
+    .shot:hover img { transform: scale(1.02); }
+    .shot.dark { background: #0d0d14; }
+    .project.full { grid-column: 1 / -1; }
+    .project.full p { max-width: 760px; }
+    .project.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 28px; align-items: start; }
+    /* Side-by-side screenshots fill the full height of their card (at least 4:3). */
+    .project.wide { align-items: stretch; }
+    .project.wide .shot { position: relative; grid-row: 1 / 6; align-self: stretch; width: 100%; margin: 0; }
+    /* Never shorter than 4:3, but grows with the text beside it; width stays the column's. */
+    .project.wide .shot::before { content: ''; display: block; padding-top: 75%; }
+    .project.wide .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+    .project.wide .shot.game img { object-position: center; }
+    @media (max-width: 760px) { .project.wide { grid-template-columns: 1fr; } .project.wide .shot { grid-row: auto; margin-bottom: 18px; } }
+    .project a.link { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; font-size: 14px; text-decoration: none; }
+    .project a.link:hover { color: var(--accent); }
+    .project a.link svg { width: 16px; height: 16px; }
+
+    /* Principles */
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 860px) { .principles { grid-template-columns: 1fr; } }
+    .principle { padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-raised); }
+    .principle .icon { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 14px; border-radius: 10px; background: var(--accent-soft); color: #c4b5fd; }
+    .principle .icon svg { width: 20px; height: 20px; }
+    .principle h3 { margin: 0 0 6px; font-size: 17px; }
+    .principle p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* Timeline */
+    .timeline { position: relative; margin: 0; padding: 0 0 0 28px; list-style: none; }
+    .timeline::before { content: ''; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2)); border-radius: 2px; }
+    .timeline li { position: relative; padding-bottom: 28px; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before { content: ''; position: absolute; left: -28px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+    .timeline .year { font-family: var(--mono); color: var(--accent-2); font-size: 13px; }
+    .timeline h3 { margin: 2px 0 4px; font-size: 18px; }
+    .timeline p { margin: 0; color: var(--muted); }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skills span { padding: 8px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-raised); font-weight: 500; font-size: 15px; }
+
+    /* Contact */
+    .contact {
+      padding: 56px 32px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.22), transparent 60%), var(--bg-raised);
+    }
+    .contact h2 { margin-bottom: 10px; }
+    .contact p { max-width: 520px; margin: 0 auto 28px; color: var(--muted); }
+    .contact .actions { justify-content: center; }
+
+    footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+    :focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; border-radius: 6px; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
   </style>
 </head>
 <body>
+  <nav aria-label="Main">
+    <div class="wrap">
+      <a class="logo" href="#top">darrell<span>.</span>parkhouse</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#journey">Journey</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>Open to remote roles &amp; contract work</span>
+      <h1>Darrell Parkhouse.<br><span class="gradient">Building software since 1981.</span></h1>
+      <p class="lead">Full-stack developer with 20+ years of professional C++, now building clean, layered systems in Node.js, TypeScript, Python, React and PostgreSQL.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">View my work</a>
+        <a class="btn btn-ghost" href="https://github.com/elite-coder-2026" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.3-1.69-1.3-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+        <a class="btn btn-ghost" href="mailto:darrellparkhouse82@gmail.com">Email me</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><strong>45 yrs</strong><span>writing software</span></div>
+        <div class="stat"><strong>20+ yrs</strong><span>professional C++</span></div>
+        <div class="stat"><strong>27</strong><span>public projects</span></div>
+        <div class="stat"><strong>0</strong><span>ORMs: raw SQL only</span></div>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <h1>Darrell Parkhouse</h1>
-    <p class="role">Full-stack developer · Node.js, TypeScript, Python, React, PostgreSQL</p>
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">// selected work</span>
+          <h2>Projects</h2>
+          <p>Full-stack systems built end to end: database schema, API layers and the interface on top.</p>
+        </div>
 
-    <p>I've been writing software since 1981: more than twenty years of professional C++, and today full-stack systems in Node.js, TypeScript, Python, React and PostgreSQL.</p>
-    <p>I care about architecture that stays clean as a codebase grows: strict layer boundaries, raw parameterized SQL, and code the next developer can actually read.</p>
-    <p class="muted">Manito, Illinois · open to remote roles and contract work · <a href="mailto:darrellparkhouse82@gmail.com">darrellparkhouse82@gmail.com</a> · <a href="https://github.com/elite-coder-2026">github.com/elite-coder-2026</a></p>
+        <div class="projects">
+          <article class="project wide">
+            <a class="shot" href="portfolio-images/beta-crm-dashboard.jpg" target="_blank" rel="noopener"><img src="portfolio-images/beta-crm-dashboard.jpg" alt="Beta CRM dashboard with revenue, pipeline, invoice and task summaries, a revenue chart, tasks due soon and overdue invoices" loading="lazy"></a>
+            <div class="project-top"><h3>Beta CRM</h3><span class="badge">Full-stack</span></div>
+            <p>A customer relationship manager with a React 19 + TypeScript client and an Express API on PostgreSQL using raw parameterized SQL.</p>
+            <ul class="highlights">
+              <li>Dashboard bringing revenue, pipeline, overdue invoices, due tasks and the team together</li>
+              <li>Multiple projects on Kanban boards with drag and drop, filters and undo</li>
+              <li>Sales and project reports with hand-built, accessible SVG charts</li>
+              <li>Invoice table with search, filters and cursor-based pagination</li>
+              <li>Validation and business rules enforced in SQL: constraints and triggers</li>
+            </ul>
+            <div class="tags"><span>React 19</span><span>TypeScript</span><span>styled-components</span><span>Express</span><span>PostgreSQL</span><span>pg</span></div>
+            <a class="link" href="https://github.com/elite-coder-2026/beta-crm-react-ts" target="_blank" rel="noopener">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </article>
 
-    <h2>Projects</h2>
-    <ul class="projects">
-      <li><strong><a href="https://github.com/elite-coder-2026/beta-crm-react-ts">Beta CRM</a></strong>: full-stack CRM. React 19 + TypeScript client with Kanban boards, sales reports with hand-built SVG charts and an invoice table with cursor pagination; Express API on PostgreSQL with raw SQL (no ORM).</li>
-      <li><strong><a href="https://github.com/elite-coder-2026/learnhub">LearnHub</a></strong>: learning management system. Four-layer Node/Express backend, raw SQL on PostgreSQL, React + TypeScript front end.</li>
-      <li><strong><a href="https://github.com/elite-coder-2026/forge">Forge</a></strong>: local agentic coding CLI in Python that reads and edits files and runs commands against models on your own machine through Ollama.</li>
-      <li><strong><a href="https://github.com/elite-coder-2026/threadline">Threadline</a></strong>: social feed where link and GitHub previews are enriched in the background. TypeScript end to end.</li>
-      <li><strong><a href="https://github.com/elite-coder-2026/dev-conn">dev-conn</a></strong>: social network for developers with messaging and real-time presence over Socket.io.</li>
-      <li><strong><a href="https://github.com/elite-coder-2026/vantage-point">Vantage Point</a></strong>: social platform built with FastAPI, PostgreSQL and server-rendered Jinja2 templates.</li>
-    </ul>
+          <article class="project wide">
+            <a class="shot dark" href="portfolio-images/forge-terminal.jpg" target="_blank" rel="noopener"><img src="portfolio-images/forge-terminal.jpg" alt="Forge running in a terminal: start-up banner, the /help command list and /model showing the local Ollama model" loading="lazy"></a>
+            <div class="project-top"><h3>Forge</h3><span class="badge">AI tooling</span></div>
+            <p>A local agentic coding CLI. It reads a repo, plans, edits files and runs commands, entirely against a model on your own machine through Ollama. Plan mode, permission prompts with diffs, and language-server tools.</p>
+            <div class="tags"><span>Python</span><span>Ollama</span><span>LSP</span><span>CLI</span></div>
+            <a class="link" href="https://github.com/elite-coder-2026/forge" target="_blank" rel="noopener">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </article>
 
-    <h2>Tech</h2>
-    <p>C · C++ · Python · JavaScript · TypeScript · Node.js · Express · React · PostgreSQL · Socket.io</p>
+          <article class="project wide">
+            <a class="shot" href="portfolio-images/dev-conn-feed.jpg" target="_blank" rel="noopener"><img src="portfolio-images/dev-conn-feed.jpg" alt="dev-conn feed: top navigation, profile card with follower counts, post composer, posts with likes, comments and shares, and a contacts list" loading="lazy"></a>
+            <div class="project-top"><h3>dev-conn</h3><span class="badge">Real-time</span></div>
+            <p>A social network for developers: posts, live component previews, messaging, friend connections and real-time presence over Socket.io.</p>
+            <div class="tags"><span>Node.js</span><span>Socket.io</span><span>React</span></div>
+            <a class="link" href="https://github.com/elite-coder-2026/dev-conn" target="_blank" rel="noopener">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </article>
+
+          <article class="project full">
+            <div class="project-top"><h3>Threadline</h3><span class="badge">Social</span></div>
+            <p>A social feed where link and GitHub previews are enriched in the background, so posting never waits on a third-party request. Layered Express + PostgreSQL backend, React + Vite client.</p>
+            <div class="tags"><span>TypeScript</span><span>Express</span><span>PostgreSQL</span><span>React</span></div>
+            <a class="link" href="https://github.com/elite-coder-2026/threadline" target="_blank" rel="noopener">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </article>
+
+          <article class="project wide">
+            <a class="shot dark" href="portfolio-images/vantage-point-feed.jpg" target="_blank" rel="noopener"><img src="portfolio-images/vantage-point-feed.jpg" alt="Vantage Point dark feed with side navigation, posts with like, comment, share and save actions, and the profile panel" loading="lazy"></a>
+            <div class="project-top"><h3>Vantage Point</h3><span class="badge">Social</span></div>
+            <p>A social platform with follows, private accounts and live online status, built with FastAPI, PostgreSQL and server-rendered Jinja2 templates.</p>
+            <div class="tags"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Jinja2</span></div>
+            <a class="link" href="https://github.com/elite-coder-2026/vantage-point" target="_blank" rel="noopener">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </article>
+
+          <article class="project wide">
+            <a class="shot dark game" href="portfolio-images/arcade-pac-man.jpg" target="_blank" rel="noopener"><img src="portfolio-images/arcade-pac-man.jpg" alt="Pac-Man clone running in HTML5 Canvas with ghosts in the maze" loading="lazy"></a>
+            <div class="project-top"><h3>Arcade</h3><span class="badge">Games</span></div>
+            <p>Classic arcade games rebuilt from scratch in HTML5 Canvas: Pac-Man, Pong, Snake, Wall Off, Hard Hat Mack and more.</p>
+            <div class="tags"><span>JavaScript</span><span>HTML5 Canvas</span></div>
+            <a class="link" href="https://github.com/elite-coder-2026/simple-games" target="_blank" rel="noopener">View code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">// how I build</span>
+          <h2>Approach</h2>
+          <p>Four decades of shipping software comes down to a few habits that keep codebases healthy as they grow.</p>
+        </div>
+        <div class="principles">
+          <div class="principle">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+            <h3>Raw SQL, no ORM</h3>
+            <p>Parameterized queries I can read, tune and explain. The database enforces the rules with constraints and triggers.</p>
+          </div>
+          <div class="principle">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="5" rx="1"/><rect x="3" y="10" width="18" height="5" rx="1"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg></div>
+            <h3>Strict layers</h3>
+            <p>Routes, controllers, services and data access each do one job, so changes stay small and bugs stay findable.</p>
+          </div>
+          <div class="principle">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>Code people can read</h3>
+            <p>Clear names, small functions and honest comments, written for the next developer, not for the compiler.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">// since 1981</span>
+          <h2>Journey</h2>
+        </div>
+        <ol class="timeline">
+          <li><span class="year">1981</span><h3>First lines of code</h3><p>Started writing software and never stopped.</p></li>
+          <li><span class="year">20+ years</span><h3>Professional C++</h3><p>Two decades building performance-sensitive systems in C and C++.</p></li>
+          <li><span class="year">Today</span><h3>Full-stack systems</h3><p>Node.js, TypeScript, Python, React and PostgreSQL: complete applications from schema to interface.</p></li>
+        </ol>
+
+        <div style="margin-top: 56px">
+          <div class="section-head" style="margin-bottom: 20px"><span class="kicker">// toolbox</span><h2>Tech</h2></div>
+          <div class="skills">
+            <span>C</span><span>C++</span><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>SQL</span><span>Socket.io</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <span class="kicker">// let's work together</span>
+          <h2>Available for remote roles &amp; contract work</h2>
+          <p>Based in Manito, Illinois. If you need someone who has seen software change for 45 years and still loves building it, get in touch.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:darrellparkhouse82@gmail.com">darrellparkhouse82@gmail.com</a>
+            <a class="btn btn-ghost" href="https://github.com/elite-coder-2026" target="_blank" rel="noopener">github.com/elite-coder-2026</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Darrell Parkhouse · Built by hand, no frameworks.</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
